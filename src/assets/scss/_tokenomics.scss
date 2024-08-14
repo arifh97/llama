@@ -1,0 +1,29 @@
+.tokenomics {
+    padding-top: 142px;
+    padding-bottom: 107px;
+    background-image: url(../img/tokenomics-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    &-title {
+        & h2 {
+            margin-bottom: 40px;
+        }
+        & span {
+            background-image: linear-gradient($bg-gradient);
+            border-radius: 50px;
+            padding: 15px 30px;
+            color: $heading;
+            @include font-24;
+            font-weight: 500;
+            line-height: 150%;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            margin-bottom: 14px;
+            width: max-content;
+            margin-right: auto;
+            margin-left: auto;
+        }
+    }
+}

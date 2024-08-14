@@ -1,13 +1,26 @@
-$font-1:'Roboto';
-$font-2:'poppins';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+$font-1:"Poppins",
+sans-serif;
+$font-2: "Montserrat",
+sans-serif;
 $white:#fff;
 $black:#000;
-$primary: #15ACFF;
-$secondary: #050505;
-$text:#C0C3C5;
+$primary: #FDB547;
+$secondary: #EC2E45;
+$text:#000;
 $heading: $white;
 $border:#4B4B4B;
 $bg:#F5C286;
+$bg-gradient:90deg,
+$primary 0%,
+$secondary 100%;
+//
+$stroke-gradient: -30deg,
+$primary 0%,
+$secondary 100%;
+//
+$gradient: $primary 0%,
+$secondary 100%;
 :root {
     scroll-behavior: auto !important;
 }

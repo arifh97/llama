@@ -1,0 +1,81 @@
+.roadmap {
+    padding-top: 150px;
+    padding-bottom: 138px;
+    background-image: url(../img/roadmap-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    &-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        & h2 {
+            margin-bottom: 25px;
+        }
+        & P {
+            margin-bottom: 20px;
+            @include font-24;
+            font-weight: 500;
+            line-height: 170%;
+            letter-spacing: 0.48px;
+        }
+        & img {
+            margin-bottom: 50px;
+        }
+        & .btn {
+            width: max-content;
+        }
+    }
+    &-card {
+        --pl: 110px;
+        @include xxxl {
+            padding-left: var(--pl);
+        }
+        position: relative;
+        & .line {
+            height: 100%;
+            width: 7px;
+            background-image: linear-gradient($bg-gradient);
+            position: absolute;
+            top: 0;
+            left: var(--pl);
+            border-radius: 50px;
+        }
+        &-single {
+            border-radius: 10px;
+            border: double 1px transparent;
+            background-image: linear-gradient( to left, $gradient), linear-gradient(100deg, $gradient);
+            background-origin: border-box;
+            background-clip: content-box, border-box;
+            max-width: 561px;
+            margin-left: 56px;
+            & p {
+                @include font-24;
+                font-weight: 500;
+                line-height: 150%;
+                margin-bottom: 20px;
+            }
+            &:not(:last-child) {
+                margin-bottom: 50px;
+            }
+            & .inner {
+                padding: 25px 30px;
+            }
+            & ul {
+                & li {
+                    display: flex;
+                    gap: 4.5px;
+                    @include font-18;
+                    line-height: 150%;
+                    align-items: center;
+                    &:not(:last-child) {
+                        margin-bottom: 5px;
+                    }
+                    & img {
+                        flex: 0 0 auto;
+                    }
+                }
+            }
+        }
+    }
+}

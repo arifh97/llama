@@ -1,0 +1,53 @@
+.banner {
+    padding-top: 195px;
+    padding-bottom: 35px;
+    background-image: url(../img/banner-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    &-content {
+        position: relative;
+        & span {
+            color: #170C0B;
+            text-shadow: 3px 3px 0px #000;
+            -webkit-text-stroke-width: 2px;
+            -webkit-text-stroke-color: #000;
+            font-family: $font-2;
+            font-size: 50px;
+            font-weight: 800;
+            line-height: 110%;
+            letter-spacing: 2.5px;
+            margin-bottom: 2px;
+            background: -webkit-linear-gradient($stroke-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-stroke: 4px transparent;
+        }
+        & h1 {
+            text-shadow: 13px 13px 0px #000;
+            font-size: 170px;
+            font-weight: 800;
+            line-height: 110%;
+            letter-spacing: 8.5px;
+            margin-bottom: 30px;
+            background: -webkit-linear-gradient($stroke-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-stroke: 8px transparent;
+            color: $heading;
+        }
+        & p {
+            font-size: 22px;
+            font-weight: 500;
+            line-height: 170%;
+            letter-spacing: 1.32px;
+            margin-bottom: 55px;
+        }
+        & .btn {
+            margin-bottom: 60px;
+        }
+        & img {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+    }
+}
