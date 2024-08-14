@@ -88,6 +88,8 @@ input[type=number] {
 
 .common {
     &-marquee {
+        position: relative;
+        z-index: 1;
         height: 173px;
         background-color: transparent;
         background-image: url(../img/marquee-bg.png);

@@ -13,7 +13,7 @@ export default function Banner() {
   return (
     <div className='banner'>
       <Container>
-        <Row>
+        <Row className='align-items-center'>
           <Col lg="7">
             <div className="banner-content">
               <span>Chillin with the Herd</span>
@@ -21,10 +21,10 @@ export default function Banner() {
               <p>Join the most relaxed crypto community and enjoy the laid-back world of Lazy Llama Coin.</p>
               <a href="" className="btn">BUY LLAMA</a>
               <Social />
-              <img src={img} alt="" className="banner-img d-none" />
+              <img src={img} alt="" className="banner-img" />
             </div>
           </Col>
-          <Col lg="5">
+          <Col lg="5" className='d-flex justify-content-end'>
             <div className="banner-card text-center">
               <h4>LLAMA PRESALE IS NOW LIVE!</h4>
               <div className="date d-flex">
