@@ -28,14 +28,25 @@
     }
     &.position-fixed {
         animation: headerAnimation .5s linear;
-        background-color: rgba($color: $bg, $alpha: .6);
-        backdrop-filter: blur(3px);
         --bs-navbar-padding-y: 24px;
         @include md {
             --bs-navbar-padding-y: 20px;
         }
         @include sm {
             --bs-navbar-padding-y: 1rem;
+        }
+    }
+    &-wrap {
+        border-radius: 10px;
+        padding: 18px 24px;
+        @include mmd {
+            padding: 10px 16px;
+        }
+        & ul {
+            gap: 40px;
+            @include lg {
+                gap: 16px;
+            }
         }
     }
     &-menu {
@@ -72,23 +83,27 @@
     }
     &-link {
         font-size: 18px;
-        line-height: 150%;
-        color: #74787D;
+        line-height: 140%;
+        color: $black !important;
         font-weight: 400;
         font-family: $font-1;
         display: block;
         padding: 10px 1rem;
+        cursor: pointer;
+        border-radius: 5px;
+        border: 1px solid #000;
+        box-shadow: 2px 2px 0px 0px #000;
         @include lg {
             padding: 10px 12px;
         }
         @include mmd {
-            font-weight: 600;
-            @include font-20;
             color: $heading;
+            text-align: center;
+            margin-bottom: 10px;
         }
         &:hover,
         &.active {
-            color: $primary;
+            box-shadow: 0 0 0;
         }
     }
     &-toggler {
@@ -97,11 +112,12 @@
         padding: var(--btn-padding-y) var(--btn-padding-x);
         border: none;
         background-color: transparent;
-        color: $heading;
+        color: $black;
         display: flex;
         align-items: center;
         justify-content: center;
-         & svg {
+        margin-left: 20px;
+        & svg {
             width: 40px;
             height: 40px;
         }

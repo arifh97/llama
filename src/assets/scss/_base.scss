@@ -66,47 +66,27 @@ input[type=number] {
 }
 
 .common {
-    &-svg {
-        display: inline-block;
-        height: 1em;
-        overflow: visible;
-        vertical-align: -0.125em;
-    }
-    &-row {
-        --bs-gutter-x: 32px;
-        margin-bottom: calc(var(--bs-gutter-x) * -1);
-        @include mmd {
-            --bs-gutter-x: 24px;
+    &-marquee {
+        & .d-flex {
+            margin-right: 20px;
+            gap: 10px;
         }
-        &>div {
-            margin-bottom: var(--bs-gutter-x);
-        }
-    }
-    &-padding {
-        --padding-y: 120px;
-        --padding-x: 0;
-        padding: var(--padding-y) var(--padding-x);
-        @include xl {
-            --padding-y: 100px;
-        }
-        @include lg {
-            --padding-y: 100px;
-        }
-        @include md {
-            --padding-y: 80px;
-        }
-        @include sm {
-            --padding-y: 60px;
-        }
-        &-top {
-            padding-top: var(--padding-y);
+        & h4 {
+            background: var(--bbb, linear-gradient(90deg, #FDB547 0%, #EC2E45 100%));
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 2px 2px 0px #000;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: #000;
+            font-weight: 300;
+            font-size: 30px;
+            line-height: 110%;
+            letter-spacing: 3px;
         }
     }
     &-title {
         margin-bottom: 60px;
-        @media (min-width: 1440px) {
-            padding: 0 4%;
-        }
         @include md {
             margin-bottom: 40px;
         }
@@ -123,37 +103,18 @@ input[type=number] {
 }
 
 .btn {
-    --bs-btn-padding-x: 20px;
-    --bs-btn-padding-y: 7px;
-    --bs-btn-color: #0D0D0C;
-    --bs-btn-border-width: 1px;
-    --bs-btn-border-color: #F8F709;
-    --bs-btn-font-size: 18px;
-    --bs-btn-border-radius: 100px;
-    @include sm {
-        --bs-btn-font-size: 16px;
-        --bs-btn-line-height: 26px;
-    }
+    padding: 13px 24px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 150%;
+    letter-spacing: .70px;
+    color: $white !important;
+    border-radius: 5px;
+    border: 1px solid #000 !important;
+    background: var(--bbb, linear-gradient(90deg, #FDB547 0%, #EC2E45 100%));
+    box-shadow: 3px 3px 0px 0px #000;
     &:hover {
-        background-color: $primary !important;
-        border-color: $primary !important;
-        color: $white !important;
-    }
-    &.bg-primary {
-        border-color: $primary !important;
-        color: $secondary !important;
-        &:hover {
-            background-color: transparent !important;
-            color: $primary !important;
-        }
-    }
-    &.bg-transparent {
-        border-color: $primary !important;
-        color: $primary !important;
-        &:hover {
-            background-color: $primary !important;
-            color: $secondary !important;
-        }
+        box-shadow: 0 0 0;
     }
 }
 
@@ -179,6 +140,7 @@ input[type=number] {
         }
     }
 }
-#root{
-    overflow:hidden;
+
+#root {
+    overflow: hidden;
 }
