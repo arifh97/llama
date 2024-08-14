@@ -20,7 +20,9 @@
             letter-spacing: 0.48px;
         }
         & img {
+            margin: 0 auto;
             margin-bottom: 50px;
+            max-width: 589px;
         }
         & .btn {
             width: max-content;
@@ -28,6 +30,7 @@
     }
     &-card {
         --pl: 110px;
+        padding: 27px 0;
         @include xxxl {
             padding-left: var(--pl);
         }
@@ -35,7 +38,7 @@
         & .line {
             height: 100%;
             width: 7px;
-            background-image: linear-gradient($bg-gradient);
+            background-image: linear-gradient(to bottom, $gradient);
             position: absolute;
             top: 0;
             left: var(--pl);
@@ -49,6 +52,13 @@
             background-clip: content-box, border-box;
             max-width: 561px;
             margin-left: 56px;
+            position: relative;
+            & .listStyle {
+                position: absolute;
+                left: -56px;
+                top: 50%;
+                transform: translate(0, -50%);
+            }
             & p {
                 @include font-24;
                 font-weight: 500;

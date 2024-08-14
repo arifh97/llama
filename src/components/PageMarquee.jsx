@@ -1,8 +1,9 @@
 import Marquee from "react-fast-marquee"
+import img from "../assets/img/buy-llama.png"
 
 export default function PageMarquee() {
   return (
-    <div className="common-marquee bg-white">
+    <div className="common-marquee d-flex align-items-center">
       <Marquee autoFill={true} speed={60}>
         <div className="d-flex align-items-center">
           <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -14,7 +15,7 @@ export default function PageMarquee() {
               </linearGradient>
             </defs>
           </svg>
-          <h4 className="mb-0 text-uppercase">text here</h4>
+          <h4 className="mb-0 text-uppercase"><img src={img} alt="" /></h4>
         </div>
       </Marquee>
     </div>

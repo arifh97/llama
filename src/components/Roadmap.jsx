@@ -2,6 +2,7 @@ import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import img from '../assets/img/roadmap-img.png'
 import icon from '../assets/img/roadmap-list-icon.png'
+import cardStyle from '../assets/img/roadmap-card-style.svg'
 
 export default function Roadmap() {
   const Roadmap = [
@@ -57,7 +58,7 @@ export default function Roadmap() {
   return (
     <div className='roadmap'>
       <Container>
-        <Row>
+        <Row className='align-items-center'>
           <Col lg="6">
             <div className="roadmap-content text-center ">
               <h2>Our Roadmap</h2>
@@ -71,6 +72,7 @@ export default function Roadmap() {
               <div className="line"></div>
               {Roadmap.map((item, index) => (
                 <div className="roadmap-card-single" key={index}>
+                  <img src={cardStyle} alt="" className="listStyle" />
                   <div className="inner">
                     <p>{item.title}</p>
                     <ul>

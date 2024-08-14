@@ -40,6 +40,7 @@
             line-height: 170%;
             letter-spacing: 1.32px;
             margin-bottom: 55px;
+            max-width: 654px;
         }
         & .btn {
             margin-bottom: 60px;
@@ -48,6 +49,152 @@
             position: absolute;
             bottom: 0;
             right: 0;
+        }
+    }
+    &-card {
+        max-width: 577px;
+        padding: 47px 48px;
+        font-family: $font-2;
+        background-image: url(../img/banner-card-bg.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-position: center;
+        & h4 {
+            color: $text;
+            margin-bottom: 27px;
+            font-weight: 700;
+        }
+        & .f-18 {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 120%;
+            letter-spacing: 1.62px;
+        }
+        & .f-16 {
+            font-size: 16px;
+            line-height: 150%;
+            letter-spacing: 1.44px;
+        }
+        & .date {
+            padding: 18px 27px;
+            border-radius: 18.523px;
+            background: var(--bbb, linear-gradient($bg-gradient));
+            gap: 50px;
+            margin-bottom: 18px;
+            & .unit {
+                color: $white;
+                font-size: 18px;
+                font-weight: 600;
+                line-height: 120%;
+                letter-spacing: 1.62px;
+                margin-bottom: 4px;
+            }
+            & .time {
+                color: $white;
+                font-size: 32px;
+                font-weight: 700;
+                line-height: 120%;
+                letter-spacing: 2.88px;
+            }
+        }
+        & .line {
+            max-width: 414px;
+            height: 14px;
+            background: $black;
+            border-radius: 50px;
+            margin-bottom: 18px;
+            position: relative;
+            & span {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 93.23%;
+                height: 100%;
+                background-image: linear-gradient($bg-gradient);
+                border-radius: 50px;
+            }
+        }
+        & .llama {
+            gap: 12px;
+            margin-bottom: 28px;
+            margin-top: 23px;
+            position: relative;
+            &::after {
+                position: absolute;
+                top: 50%;
+                left: 0px;
+                width: 92px;
+                height: 1px;
+                content: '';
+                background: linear-gradient(to left, $gradient);
+            }
+            &::before {
+                position: absolute;
+                top: 50%;
+                right: 0px;
+                width: 92px;
+                height: 1px;
+                content: '';
+                background: linear-gradient(to right, $gradient);
+            }
+            & span {
+                line-height: 120%;
+                letter-spacing: 4.16px;
+            }
+        }
+        & .Btn {
+            & button {
+                padding: 0;
+                & .inner {
+                    padding: 13px;
+                    font-size: 18px;
+                    font-weight: 500;
+                    line-height: 120%;
+                    letter-spacing: 0.9px;
+                }
+                border-radius: 46px;
+                border:double 1px transparent;
+                background-image:linear-gradient($bg-gradient),
+                linear-gradient(to left, $gradient);
+                background-origin:border-box;
+                background-clip:content-box,
+                border-box;
+            }
+        }
+        & .paymentBtn {
+            gap: 38px;
+            margin-bottom: 28px;
+            & button {
+                & .inner {
+                    gap: 28px;
+                }
+            }
+        }
+        & .cardBtn {
+            gap: 32px;
+            margin-bottom: 36px;
+            & button {
+                margin-bottom: 5px;
+                width: 224px;
+            }
+        }
+        & .pl {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 11px;
+            & p {
+                font-size: 14.818px;
+                font-weight: 500;
+                line-height: 120%;
+                letter-spacing: 3.705px;
+            }
+        }
+        & .lastP {
+            max-width: 338px;
+            font-size: 16.67px;
+            font-weight: 500;
+            line-height: 150%;
+            letter-spacing: 1.5px;
         }
     }
 }

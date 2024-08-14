@@ -1,7 +1,7 @@
 body {
     font-size: 16px;
     font-weight: 400;
-    line-height: calc(26px/16px);
+    line-height: 120%;
     color: $text;
     font-family: $font-1;
     background-color: $bg;
@@ -88,6 +88,14 @@ input[type=number] {
 
 .common {
     &-marquee {
+        height: 173px;
+        background-color: transparent;
+        background-image: url(../img/marquee-bg.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        margin-top: -44px;
+        margin-bottom: -24px;
         & .d-flex {
             margin-right: 20px;
             gap: 10px;
@@ -100,7 +108,7 @@ input[type=number] {
             text-shadow: 2px 2px 0px #000;
             -webkit-text-stroke-width: 1px;
             -webkit-text-stroke-color: #000;
-            font-weight: 300;
+            font-weight: 600;
             font-size: 30px;
             line-height: 110%;
             letter-spacing: 3px;
