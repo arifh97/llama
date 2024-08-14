@@ -9,7 +9,7 @@ export default function Footer() {
     <div className='footer'>
       <Container>
         <Row className='justify-content-center text-center'>
-          <Col xs='12' md="8" xl='6'>
+          <Col xs='12' md="10" xl="8" xxl='6'>
             <div className="footer-wrap">
               <div className="img">
                 <img src={img} alt="" />

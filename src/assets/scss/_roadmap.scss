@@ -5,6 +5,15 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    @include xl {
+        padding-top: 160px;
+    }
+    @include lg {
+        padding-top: 120px;
+    }
+    @include mmd {
+        padding-top: 160px;
+    }
     &-content {
         display: flex;
         flex-direction: column;
@@ -23,16 +32,32 @@
             margin: 0 auto;
             margin-bottom: 50px;
             max-width: 589px;
+            @include xl {
+                max-width: 100%;
+            }
+            @include lg {
+                max-width: 100%;
+            }
+            @include mmd {
+                max-width: 100%;
+            }
         }
         & .btn {
             width: max-content;
         }
     }
     &-card {
-        --pl: 110px;
         padding: 27px 0;
         @include xxxl {
+            --pl: 110px;
             padding-left: var(--pl);
+        }
+        @include xxl {
+            --pl: 70px;
+            padding-left: var(--pl);
+        }
+        @include xl {
+            margin-left: auto;
         }
         position: relative;
         & .line {
@@ -43,19 +68,35 @@
             top: 0;
             left: var(--pl);
             border-radius: 50px;
+            @include xl {
+                left: 13%;
+            }
+            @include lg {
+                left: 0;
+            }
         }
         &-single {
             border-radius: 10px;
             border: double 1px transparent;
-            background-image: linear-gradient( to left, $gradient), linear-gradient(100deg, $gradient);
+            background-image: linear-gradient( to right, #E57360, #F5B667), linear-gradient(100deg, $gradient);
             background-origin: border-box;
             background-clip: content-box, border-box;
             max-width: 561px;
             margin-left: 56px;
             position: relative;
+            @include xl {
+                max-width: 420px;
+                margin-left: auto;
+            }
+            @include lg {
+                max-width: 380px;
+            }
+            @include mmd {
+                max-width: 420px;
+            }
             & .listStyle {
                 position: absolute;
-                left: -56px;
+                left: -57px;
                 top: 50%;
                 transform: translate(0, -50%);
             }
@@ -70,6 +111,12 @@
             }
             & .inner {
                 padding: 25px 30px;
+                @include lg {
+                    padding: 20px;
+                }
+                @include lg {
+                    padding: 20px;
+                }
             }
             & ul {
                 & li {

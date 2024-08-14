@@ -21,6 +21,18 @@
             background: -webkit-linear-gradient($stroke-gradient);
             -webkit-background-clip: text;
             -webkit-text-stroke: 4px transparent;
+            @include xxl {
+                font-size: 42px;
+            }
+            @include xl {
+                font-size: 38px;
+            }
+            @include lg {
+                font-size: 32px;
+            }
+            @include mmd {
+                font-size: 28px;
+            }
         }
         & h1 {
             text-shadow: 13px 13px 0px #000;
@@ -33,6 +45,23 @@
             -webkit-background-clip: text;
             -webkit-text-stroke: 8px transparent;
             color: $heading;
+            @include xxl {
+                font-size: 130px;
+            }
+            @include xl {
+                font-size: 100px;
+                margin-bottom: 24px;
+            }
+            @include lg {
+                font-size: 80px;
+                margin-bottom: 18px;
+                text-shadow: 8px 8px 0px #000;
+                letter-spacing: 7px;
+            }
+            @include mmd {
+                font-size: 50px;
+                margin-bottom: 16px;
+            }
         }
         & p {
             font-size: 22px;
@@ -41,14 +70,48 @@
             letter-spacing: 1.32px;
             margin-bottom: 55px;
             max-width: 654px;
+            @include xl {
+                margin-bottom: 42px;
+            }
+            @include lg {
+                margin: 0 auto;
+                margin-bottom: 35px;
+            }
+            @include mmd {
+                margin: 0 auto;
+                margin-bottom: 28px;
+            }
         }
         & .btn {
             margin-bottom: 60px;
+            @include xl {
+                margin-bottom: 50px;
+            }
+            @include lg {
+                margin-bottom: 40px;
+            }
+            @include mmd {
+                margin-bottom: 32px;
+            }
         }
         & img {
             position: absolute;
             bottom: -250px;
             right: 0;
+            @include xxl {
+                bottom: -215px;
+                right: 40px;
+                max-width: 300px;
+            }
+            @include xl {
+                bottom: -215px;
+                right: -50px;
+                max-width: 200px;
+            }
+            @include lg {
+                position: unset;
+                margin: 30px 0;
+            }
         }
     }
     &-card {
@@ -143,8 +206,14 @@
             }
         }
         & .Btn {
-            & button {
+            & button,
+            .input-box {
                 padding: 0;
+                border-radius: 46px;
+                border: double 1px transparent;
+                background-image: linear-gradient($bg-gradient), linear-gradient(to left, $gradient);
+                background-origin: border-box;
+                background-clip: content-box, border-box;
                 & .inner {
                     padding: 13px;
                     font-size: 18px;
@@ -152,13 +221,23 @@
                     line-height: 120%;
                     letter-spacing: 0.9px;
                 }
+            }
+            & .input-box {
+                position: relative;
+                width: calc(50% - 16px);
+                & img {
+                    position: absolute;
+                    right: 13px;
+                    top: 50%;
+                    transform: translate(0, -50%);
+                }
+            }
+            & input {
+                padding: 17px 13px;
+                color: $black;
                 border-radius: 46px;
-                border:double 1px transparent;
-                background-image:linear-gradient($bg-gradient),
-                linear-gradient(to left, $gradient);
-                background-origin:border-box;
-                background-clip:content-box,
-                border-box;
+                border: 0;
+                background: transparent;
             }
         }
         & .paymentBtn {

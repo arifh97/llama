@@ -13,18 +13,18 @@ export default function Banner() {
   return (
     <div className='banner'>
       <Container>
-        <Row className='align-items-center'>
-          <Col lg="7">
-            <div className="banner-content">
+        <Row className='align-items-center justify-content-center'>
+          <Col lg="10" xl="5" xxl="7">
+            <div className="banner-content text-center text-xl-start">
               <span>Chillin with the Herd</span>
               <h1>$LLAMA</h1>
               <p>Join the most relaxed crypto community and enjoy the laid-back world of Lazy Llama Coin.</p>
               <a href="" className="btn">BUY LLAMA</a>
-              <Social />
+              <Social className="justify-content-center justify-content-xl-start" />
               <img src={img} alt="" className="banner-img" />
             </div>
           </Col>
-          <Col lg="5" className='d-flex justify-content-end'>
+          <Col lg="8" xl="7" xxl="5" className='d-flex justify-content-end'>
             <div className="banner-card text-center">
               <h4>LLAMA PRESALE IS NOW LIVE!</h4>
               <div className="date d-flex">
@@ -59,8 +59,17 @@ export default function Banner() {
               </div>
               <p className='pl'><p>ETH you pay</p> <p>Max</p> <p>$Llama you receive</p></p>
               <div className="cardBtn Btn d-flex flex-wrap">
-                <button className=''> <div className="inner d-flex align-items-center justify-content-between">0 <img src={eth} alt="" /></div></button>
-                <button className=''> <div className="inner d-flex align-items-center justify-content-between">0 <img src={woman} alt="" /></div></button>
+                <div className="input-box">
+                  <input type="text" name="" value={0} id="" />
+                  <img src={eth} alt="" />
+                </div>
+                <div className="input-box">
+                  <input type="text" name="" value={0} id="" />
+                  <img src={woman} alt="" />
+                </div>
+                {/* <button className=''> <div className="inner d-flex align-items-center justify-content-between">0 </div></button>
+                <button className=''> <div className="inner d-flex align-items-center justify-content-between">0 <img src={} alt="" /></div></button> */}
+
                 <button className=''> <div className="inner d-flex align-items-center justify-content-center">Connect Wallet</div></button>
                 <button className=''> <div className="inner d-flex align-items-center justify-content-between"><img src={bnb} alt="" /> Buy with BNB</div></button>
               </div>

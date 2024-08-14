@@ -44,6 +44,9 @@
         }
         & ul {
             gap: 40px;
+            @include xl {
+                gap: 20px;
+            }
             @include lg {
                 gap: 16px;
             }
