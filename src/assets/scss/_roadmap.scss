@@ -16,6 +16,7 @@
     }
     @include sm {
         padding-top: 60px;
+        padding-bottom: 50px;
     }
     &-content {
         display: flex;
@@ -83,6 +84,9 @@
             @include mmd {
                 left: 11.9%;
             }
+            @include sm {
+                display: none;
+            }
         }
         &-single {
             border-radius: 10px;
@@ -119,6 +123,9 @@
             }
             &:not(:last-child) {
                 margin-bottom: 50px;
+                @include sm {
+                    margin-bottom: 20px;
+                }
             }
             & .inner {
                 padding: 25px 30px;

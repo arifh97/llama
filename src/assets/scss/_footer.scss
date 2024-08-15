@@ -6,11 +6,34 @@
     background-size: cover;
     background-position: center;
     position: relative;
+    z-index: 1;
+    @include xxl {
+        background-size: 100% 112%;
+    }
+    @include xl {
+        background-size: 100% 117%;
+    }
+    @include lg {
+        background-size: 100% 115%;
+    }
     @include mmd {
         padding-top: 85px;
+        background-size: 100% 122%;
     }
-    @include xl {}
-    z-index: 1;
+    @include sm {
+        background-size: 100% 157%;
+    }
+    &::after {
+        position: absolute;
+        top: -46px;
+        left: 0;
+        width: 100%;
+        height: 80px;
+        content: "";
+        background-color: #F5C286;
+        z-index: -1;
+        filter: blur(24px);
+    }
     & .style {
         position: absolute;
         top: -72px;
@@ -20,12 +43,19 @@
         height: 208px;
         @include xl {
             height: 150px;
+            top: -50px;
         }
         @include lg {
             height: 150px;
+            top: -50px;
         }
         @include mmd {
             height: 100px;
+            top: -30px;
+        }
+        @include sm {
+            height: 65px;
+            top: -23px;
         }
     }
     &-wrap {
