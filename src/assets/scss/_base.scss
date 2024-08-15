@@ -43,6 +43,11 @@ h2 {
         text-shadow: 2px 2px 0px #000;
         -webkit-text-stroke-width: 1px;
     }
+    @include sm {
+        font-size: 45px;
+        text-shadow: 2px 2px 0px #000;
+        -webkit-text-stroke-width: 1px;
+    }
 }
 
 span {
@@ -124,9 +129,25 @@ input[type=number] {
         @include mmd {
             height: 90px;
         }
+        @include sm {
+            height: 80px;
+        }
+        @include ssm {
+            height: 70px;
+        }
         & .d-flex {
             margin-right: 20px;
             gap: 10px;
+        }
+        & svg {
+            @include sm {
+                width: 24px;
+            }
+        }
+        & img {
+            @include sm {
+                max-width: 120px;
+            }
         }
         & h4 {
             background: var(--bbb, linear-gradient(90deg, #FDB547 0%, #EC2E45 100%));
@@ -171,6 +192,9 @@ input[type=number] {
     border: 1px solid #000 !important;
     background: var(--bbb, linear-gradient(90deg, #FDB547 0%, #EC2E45 100%));
     box-shadow: 3px 3px 0px 0px #000;
+    @include sm {
+        padding: 11px 24px;
+    }
     &:hover {
         box-shadow: 0 0 0;
     }
@@ -180,6 +204,9 @@ input[type=number] {
 .social {
     &-list {
         gap: 40px;
+        @include sm {
+            gap: 20px;
+        }
     }
     &-link {
         --width: 56px;

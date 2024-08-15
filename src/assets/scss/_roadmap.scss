@@ -14,12 +14,18 @@
     @include mmd {
         padding-top: 90px;
     }
+    @include sm {
+        padding-top: 60px;
+    }
     &-content {
         display: flex;
         flex-direction: column;
         justify-content: center;
         & h2 {
             margin-bottom: 25px;
+            @include sm {
+                margin-bottom: 15px;
+            }
         }
         & P {
             margin-bottom: 20px;

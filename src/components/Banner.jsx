@@ -45,7 +45,7 @@ export default function Banner() {
                   <span className='time'>02</span>
                 </div>
               </div>
-              <p className="f-18 mb-4">USDT RAISED: $520,320.46 / $543,440</p>
+              <p className="f-18 mb-3 mb-md-4">USDT RAISED: $520,320.46 / $543,440</p>
               <div className="line mx-auto">
                 <span></span>
               </div>
@@ -67,9 +67,6 @@ export default function Banner() {
                   <input type="text" name="" value={0} id="" />
                   <img src={woman} alt="" />
                 </div>
-                {/* <button className=''> <div className="inner d-flex align-items-center justify-content-between">0 </div></button>
-                <button className=''> <div className="inner d-flex align-items-center justify-content-between">0 <img src={} alt="" /></div></button> */}
-
                 <button className=''> <div className="inner d-flex align-items-center justify-content-center">Connect Wallet</div></button>
                 <button className=''> <div className="inner d-flex align-items-center justify-content-between"><img src={bnb} alt="" /> Buy with BNB</div></button>
               </div>

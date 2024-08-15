@@ -18,6 +18,9 @@
     @include mmd {
         padding-top: 80px;
     }
+    @include sm {
+        padding: 50px 0;
+    }
     &::after {
         position: absolute;
         bottom: -30px;
@@ -34,9 +37,15 @@
             @include mmd {
                 margin-bottom: 20px;
             }
+            @include sm {
+                margin-bottom: 8px;
+            }
         }
     }
     &-content {
+        @include sm {
+            text-align: center;
+        }
         & h3 {
             text-shadow: 5px 5px 0px #000;
             -webkit-text-stroke-width: 2px;
@@ -62,6 +71,10 @@
                 font-size: 46px;
                 text-shadow: 3px 3px 0px #000;
                 -webkit-text-stroke-width: 1px;
+            }
+            @include sm {
+                font-size: 38px;
+                margin-bottom: 20px;
             }
         }
         & p {
