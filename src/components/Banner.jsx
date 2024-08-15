@@ -11,7 +11,7 @@ import exclamation from '../assets/img/exclamation.png'
 
 export default function Banner() {
   return (
-    <div className='banner'>
+    <div className='banner d-none'>
       <Container>
         <Row className='align-items-center justify-content-center'>
           <Col lg="10" xl="5" xxl="7">
