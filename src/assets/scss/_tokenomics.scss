@@ -17,6 +17,9 @@
     &-title {
         & h2 {
             margin-bottom: 40px;
+            @include mmd {
+                margin-bottom: 20px;
+            }
         }
         & span {
             background-image: linear-gradient($bg-gradient);

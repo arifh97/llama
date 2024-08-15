@@ -31,6 +31,9 @@
     &-title {
         & h2 {
             margin-bottom: 50px;
+            @include mmd {
+                margin-bottom: 20px;
+            }
         }
     }
     &-content {

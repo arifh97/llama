@@ -12,7 +12,7 @@
         padding-top: 120px;
     }
     @include mmd {
-        padding-top: 160px;
+        padding-top: 90px;
     }
     &-content {
         display: flex;
@@ -74,6 +74,9 @@
             @include lg {
                 left: 0;
             }
+            @include mmd {
+                left: 11.9%;
+            }
         }
         &-single {
             border-radius: 10px;
@@ -92,6 +95,8 @@
                 max-width: 380px;
             }
             @include mmd {
+                margin-left: auto;
+                margin-right: auto;
                 max-width: 420px;
             }
             & .listStyle {

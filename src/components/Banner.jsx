@@ -24,7 +24,7 @@ export default function Banner() {
               <img src={img} alt="" className="banner-img" />
             </div>
           </Col>
-          <Col lg="8" xl="7" xxl="5" className='d-flex justify-content-end'>
+          <Col lg="8" xl="7" xxl="5" className='d-flex justify-content-center justify-content-xl-end'>
             <div className="banner-card text-center">
               <h4>LLAMA PRESALE IS NOW LIVE!</h4>
               <div className="date d-flex">

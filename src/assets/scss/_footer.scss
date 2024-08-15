@@ -6,6 +6,9 @@
     background-size: cover;
     background-position: center;
     position: relative;
+    @include mmd {
+        padding-top: 85px;
+    }
     @include xl {}
     z-index: 1;
     & .style {
@@ -22,7 +25,7 @@
             height: 150px;
         }
         @include mmd {
-            height: 150px;
+            height: 100px;
         }
     }
     &-wrap {
