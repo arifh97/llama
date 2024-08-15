@@ -181,7 +181,6 @@ input[type=number] {
 }
 
 .btn {
-    // padding: 13px 24px;
     padding: 13px 39.3px;
     font-size: 18px;
     font-weight: 500;
@@ -192,6 +191,7 @@ input[type=number] {
     border: 1px solid #000 !important;
     background: var(--bbb, linear-gradient(90deg, #FDB547 0%, #EC2E45 100%));
     box-shadow: 3px 3px 0px 0px #000;
+    @include transition;
     @include sm {
         padding: 11px 24px;
     }

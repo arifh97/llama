@@ -327,6 +327,27 @@
                 justify-content: center;
             }
             & button {
+                @include transition;
+                position: relative;
+                z-index: 1;
+                overflow: hidden;
+                &::after {
+                    position: absolute;
+                    z-index: -1;
+                    top: 0;
+                    left: -145px;
+                    width: 100%;
+                    height: 100%;
+                    content: '';
+                    background-image: linear-gradient(to left, $gradient);
+                    border-radius: 46px;
+                    @include transition;
+                }
+                &:hover {
+                    &::after {
+                        left: 0;
+                    }
+                }
                 & .inner {
                     gap: 28px;
                     @include sm {
@@ -355,8 +376,28 @@
             & button {
                 margin-bottom: 5px;
                 width: 224px;
+                position: relative;
+                overflow: hidden;
+                z-index: 1;
                 @include sm {
                     width: calc(50% - 8px);
+                }
+                &::after {
+                    position: absolute;
+                    z-index: -1;
+                    top: 0;
+                    left: -220px;
+                    width: 100%;
+                    height: 100%;
+                    content: '';
+                    background-image: linear-gradient(to left, $gradient);
+                    border-radius: 46px;
+                    @include transition;
+                }
+                &:hover {
+                    &::after {
+                        left: 0;
+                    }
                 }
             }
         }
