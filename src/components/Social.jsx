@@ -43,8 +43,6 @@ export default function Social({ className }) {
        url: ''
     }
 
-    ,
-
   ];
 
   return (
