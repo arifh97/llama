@@ -1,13 +1,6 @@
-import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import Social from './Social'
 import img from '../assets/img/banner-img.png'
-import eth from '../assets/img/eth.png'
-import usdt from '../assets/img/usdt.png'
-import card from '../assets/img/card.png'
-import woman from '../assets/img/woman.png'
-import bnb from '../assets/img/bnb.png'
-import exclamation from '../assets/img/exclamation.png'
 
 export default function Banner() {
   return (
