@@ -4,102 +4,156 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    @include lg {
+        padding-bottom: 50px;
+    }
+    @include mmd {
+        padding-bottom: 80px;
+    }
     @include sm {
         padding-top: 165px;
     }
-    &-content {
-        position: relative;
-        & .title {
-            text-align: center;
-            margin-bottom: 60px;
-            & span {
-                color: #170C0B;
-                text-shadow: 3px 3px 0px #000;
-                -webkit-text-stroke-width: 2px;
-                -webkit-text-stroke-color: #000;
-                font-family: $font-2;
-                font-size: 50px;
-                font-weight: 800;
-                line-height: 110%;
-                letter-spacing: 2.5px;
-                margin-bottom: 2px;
-                background: -webkit-linear-gradient($stroke-gradient);
-                -webkit-background-clip: text;
-                -webkit-text-stroke: 4px transparent;
-                @include xxl {
-                    font-size: 42px;
+    &.v2 {
+        & .banner {
+            &-content {
+                position: relative;
+                & .title {
+                    text-align: center;
+                    margin-bottom: 60px;
+                    @include lg {
+                        margin-bottom: 40px;
+                    }
+                    @include mmd {
+                        margin-bottom: 30px;
+                    }
+                    & span {
+                        color: #170C0B;
+                        text-shadow: 3px 3px 0px #000;
+                        -webkit-text-stroke-width: 2px;
+                        -webkit-text-stroke-color: #000;
+                        font-family: $font-2;
+                        font-size: 50px;
+                        font-weight: 800;
+                        line-height: 110%;
+                        letter-spacing: 2.5px;
+                        margin-bottom: 2px;
+                        background: -webkit-linear-gradient(185deg, $gradient);
+                        -webkit-background-clip: text;
+                        -webkit-text-stroke: 4px transparent;
+                        @include xxl {
+                            font-size: 42px;
+                        }
+                        @include xl {
+                            font-size: 38px;
+                        }
+                        @include lg {
+                            font-size: 32px;
+                        }
+                        @include mmd {
+                            font-size: 28px;
+                        }
+                    }
+                    & h1 {
+                        text-shadow: 13px 13px 0px #000;
+                        font-size: 170px;
+                        font-weight: 800;
+                        line-height: 110%;
+                        letter-spacing: 8.5px;
+                        margin-bottom: 30px;
+                        background: -webkit-linear-gradient($stroke-gradient);
+                        -webkit-background-clip: text;
+                        -webkit-text-stroke: 8px transparent;
+                        color: $heading;
+                        @include xxl {
+                            font-size: 130px;
+                        }
+                        @include xl {
+                            font-size: 100px;
+                            margin-bottom: 24px;
+                        }
+                        @include lg {
+                            font-size: 80px;
+                            margin-bottom: 18px;
+                            text-shadow: 8px 8px 0px #000;
+                            -webkit-text-stroke: 7px transparent;
+                            letter-spacing: 7px;
+                        }
+                        @include mmd {
+                            font-size: 70px;
+                            margin-bottom: 16px;
+                            text-shadow: 7px 7px 0px #000;
+                            letter-spacing: 6px;
+                            -webkit-text-stroke: 6px transparent;
+                        }
+                    }
                 }
-                @include xl {
-                    font-size: 38px;
+                & .wrap {
+                    @include xxxl {
+                        padding-left: 150px;
+                    }
+                    @include xxl {
+                        padding-left: 150px;
+                    }
+                    @include xl {
+                        padding-left: 100px;
+                    }
+                    @include mmd {
+                        flex-direction: column;
+                        gap: 30px;
+                        text-align: center;
+                    }
+                    @include ssm {
+                        gap: 20px;
+                    }
                 }
-                @include lg {
-                    font-size: 32px;
+                & p {
+                    font-size: 22px;
+                    font-weight: 500;
+                    line-height: 170%;
+                    letter-spacing: 1.32px;
+                    margin-bottom: 55px;
+                    max-width: 362px;
+                    @include xl {
+                        margin-bottom: 42px;
+                    }
+                    @include lg {
+                        margin: 0 auto;
+                        margin-bottom: 35px;
+                    }
+                    @include mmd {
+                        margin: 0 auto;
+                        margin-bottom: 28px;
+                    }
+                    @include ssm {
+                        margin-bottom: 20px;
+                    }
                 }
-                @include mmd {
-                    font-size: 28px;
+                & img {
+                    margin-left: 247px;
+                    margin-right: 67px;
+                    max-width: none;
+                    width: 625px;
+                    @include xl {
+                        margin-left: 150px;
+                        max-width: 400px;
+                        width: auto;
+                    }
+                    @include lg {
+                        margin-left: 100px;
+                        max-width: 400px;
+                        width: auto;
+                    }
+                    @include mmd {
+                        margin-left: 0;
+                        margin-right: 0;
+                        max-width: 400px;
+                        width: auto;
+                    }
+                    @include sm {
+                        max-width: 100%;
+                    }
                 }
             }
-            & h1 {
-                text-shadow: 13px 13px 0px #000;
-                font-size: 170px;
-                font-weight: 800;
-                line-height: 110%;
-                letter-spacing: 8.5px;
-                margin-bottom: 30px;
-                background: -webkit-linear-gradient($stroke-gradient);
-                -webkit-background-clip: text;
-                -webkit-text-stroke: 8px transparent;
-                color: $heading;
-                @include xxl {
-                    font-size: 130px;
-                }
-                @include xl {
-                    font-size: 100px;
-                    margin-bottom: 24px;
-                }
-                @include lg {
-                    font-size: 80px;
-                    margin-bottom: 18px;
-                    text-shadow: 8px 8px 0px #000;
-                    -webkit-text-stroke: 7px transparent;
-                    letter-spacing: 7px;
-                }
-                @include mmd {
-                    font-size: 70px;
-                    margin-bottom: 16px;
-                    text-shadow: 7px 7px 0px #000;
-                    letter-spacing: 6px;
-                    -webkit-text-stroke: 6px transparent;
-                }
-            }
-        }
-        & .wrap {
-            padding-left: 150px;
-        }
-        & p {
-            font-size: 22px;
-            font-weight: 500;
-            line-height: 170%;
-            letter-spacing: 1.32px;
-            margin-bottom: 55px;
-            max-width: 362px;
-            @include xl {
-                margin-bottom: 42px;
-            }
-            @include lg {
-                margin: 0 auto;
-                margin-bottom: 35px;
-            }
-            @include mmd {
-                margin: 0 auto;
-                margin-bottom: 28px;
-            }
-        }
-        & img {
-            margin-left: 247px;
-            margin-right: 67px;
-            max-width: none;
-            width: 625px;
         }
     }
 }
