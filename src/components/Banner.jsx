@@ -2,7 +2,6 @@ import { Container, Row, Col } from 'react-bootstrap'
 import Social from './Social'
 import img from '../assets/img/banner-img.png'
 
-
 export default function Banner() {
   return (
     <div className='banner v2'>
