@@ -1,6 +1,7 @@
-import React from 'react'
+import { useEffect, useState } from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import Social from './Social'
+
 import img from '../assets/img/banner-img.png'
 import eth from '../assets/img/eth.png'
 import usdt from '../assets/img/usdt.png'
@@ -10,6 +11,29 @@ import bnb from '../assets/img/bnb.png'
 import exclamation from '../assets/img/exclamation.png'
 
 export default function Banner() {
+  const endDate = "2024-09-22";
+  const calculateTimeLeft = () => {
+    const difference = +new Date(endDate) - +new Date();
+    let timeLeft = {};
+    if (difference > 0) {
+      timeLeft = {
+        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+        minutes: Math.floor((difference / 1000 / 60) % 60),
+        seconds: Math.floor((difference / 1000) % 60),
+      };
+    }
+    return timeLeft;
+  };
+
+  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setTimeLeft(calculateTimeLeft());
+    }, 1000);
+    return () => clearTimeout(timer);
+  }, [timeLeft]);
+
   return (
     <div className='banner'>
       <Container>
@@ -28,22 +52,12 @@ export default function Banner() {
             <div className="banner-card text-center">
               <h4>LLAMA PRESALE IS NOW LIVE!</h4>
               <div className="date d-flex">
-                <div className="single">
-                  <span className='unit'>Days</span>
-                  <span className='time'>36</span>
-                </div>
-                <div className="single">
-                  <span className='unit'>Hours</span>
-                  <span className='time'>09</span>
-                </div>
-                <div className="single">
-                  <span className='unit'>Minutes</span>
-                  <span className='time'>53</span>
-                </div>
-                <div className="single">
-                  <span className='unit'>Second</span>
-                  <span className='time'>02</span>
-                </div>
+                {Object.entries(timeLeft).map(([unit, value], index) => (
+                  <div className="single" key={index}>
+                    <span className='d-block unit text-capitalize'>{unit}</span>
+                    <span className='d-block time'>{value}</span>
+                  </div>
+                ))}
               </div>
               <p className="f-18 mb-3 mb-md-4">USDT RAISED: $520,320.46 / $543,440</p>
               <div className="line mx-auto">
