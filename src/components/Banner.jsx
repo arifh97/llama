@@ -1,4 +1,3 @@
-import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import Social from './Social'
 import img from '../assets/img/banner-img.png'
